@@ -12,6 +12,9 @@ A React Native mobile application developed using React Native CLI and TypeScrip
 - `user` – Stores the currently logged-in user's information.
 
 ### Login Screen
+
+<img src="screenshots/login.jpg" alt="Login Screen" width="200"/>
+
 - Email and password input fields.
 - Email and password format validation.
 - Incorrect credentials error handling.
@@ -19,6 +22,9 @@ A React Native mobile application developed using React Native CLI and TypeScrip
 - Password visibility toggle.
 
 ### Signup Screen
+
+<img src="screenshots/signup.jpg" alt="Signup Screen" width="200"/>
+
 - Name, email, and password input fields.
 - Required field validation.
 - Email format validation.
@@ -28,6 +34,9 @@ A React Native mobile application developed using React Native CLI and TypeScrip
 - Password visibility toggle.
 
 ### Home Screen
+
+<img src="screenshots/home.jpg" alt="Home Screen" width="200"/>
+
 - Displays the logged-in user's name and email.
 - Logout button to end the current session.
 
@@ -67,7 +76,7 @@ A React Native mobile application developed using React Native CLI and TypeScrip
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <GITHUB_REPOSITORY_URL>
+git clone https://github.com/SueShan3/AuthApp.git
 ```
 
 ### Step 2: Navigate to the Project Directory
