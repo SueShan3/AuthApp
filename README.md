@@ -1,97 +1,95 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# AuthApp – User Authentication App
 
-# Getting Started
+A React Native mobile application developed using React Native CLI and TypeScript. This application demonstrates user authentication using React Context API, form validation, navigation, and local data persistence.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 1. Implemented Features
 
-## Step 1: Start Metro
+### Authentication (React Context API)
+- Implemented `AuthContext` to manage global authentication state.
+- `signup()` – Registers new users.
+- `login()` – Authenticates users using email and password.
+- `logout()` – Logs out the currently authenticated user.
+- `user` – Stores the currently logged-in user's information.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### Login Screen
+- Email and password input fields.
+- Email and password format validation.
+- Incorrect credentials error handling.
+- Navigation to the Signup screen.
+- Password visibility toggle.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Signup Screen
+- Name, email, and password input fields.
+- Required field validation.
+- Email format validation.
+- Minimum password length of 6 characters.
+- Duplicate email prevention.
+- Navigation to the Login screen.
+- Password visibility toggle.
 
-```sh
-# Using npm
-npm start
+### Home Screen
+- Displays the logged-in user's name and email.
+- Logout button to end the current session.
 
-# OR using Yarn
-yarn start
+### Authentication Persistence (AsyncStorage)
+- Stores multiple registered user accounts.
+- Saves the currently logged-in user's session.
+- Restores the authentication session when reopening the application.
+- Removes only the active session during logout while keeping registered accounts.
+
+### Navigation
+- React Navigation Native Stack.
+- Login, Signup, and Home screens.
+- Conditional navigation based on authentication state.
+- Splash screen while restoring the saved session.
+
+## 2. Technologies Used
+
+- React Native CLI
+- TypeScript
+- React Context API
+- React Navigation
+- AsyncStorage
+- Lucide React Native
+- React Native SVG
+
+## 3. Setup Instructions
+
+### Prerequisites
+
+- Windows 10/11
+- Node.js
+- npm
+- Android Studio
+- Android SDK
+- Android emulator or physical Android device
+
+### Step 1: Clone the Repository
+
+```bash
+git clone <GITHUB_REPOSITORY_URL>
 ```
 
-## Step 2: Build and run your app
+### Step 2: Navigate to the Project Directory
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+```bash
+cd AuthApp
+```
 
-### Android
+### Step 3: Install Dependencies
 
-```sh
-# Using npm
+```bash
+npm install
+```
+
+### Step 4: Run the Application
+
+Start your Android emulator or connect your Android device.
+
+Execute:
+
+```bash
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+The React Native CLI will build and launch the application. Metro starts automatically when needed.
